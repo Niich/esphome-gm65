@@ -97,9 +97,10 @@ Send: `[0x7E, 0x00, 0x07, 0x01, 0x00, 0x13, 0x01, 0xAB, 0xCD]`
 
 Recieve: `[0x02, 0x00, 0x00, 0x01, 0x00, 0x33, 0x31]`
 
-Explanation: We requested a read `0x07` starting at address `0x00,0x13` and asked for 1 byte `0x01` of data, so a single "Zone", and set the CRC value to the magic "ignore CRC check" value. We recieved a responce back with `0x02,0x00,0x00` indicating that our request was sucessfull. The length of our data is 1 byte `0x01` and the value of our data is 0x00.
+Explanation: We requested a read `0x07` starting at address `0x00,0x13` and asked for 1 byte `0x01` of data, so a single "Zone", and set the CRC value to the magic "ignore CRC check" value. We recieved a response back with `0x02,0x00,0x00` indicating that our request was sucessfull. The length of our data is 1 byte `0x01` and the value of our data is `0x00` and the CRC for the response is `0x33,0x32`.
 
-To know if "Same barcode reading delay" is enabled or disabled we need to convert the hex value to binary and look at the value of the 7th bit.
+To know if "Same barcode reading delay" is enabled or disabled we need to convert the hex value to binary and look at the value of the 7th bit. So in this case our data is `0b00000000` so the value of the 7th bit is 0 indicating that this setting is currently turned off (disabled).
+
 ![example zone bit values](https://github.com/Niich/esphome-gm65/blob/d2ce53c63b60bad941ab43723ec77f0a6f02cc5e/img/example-data-decode.JPG)
 
 
