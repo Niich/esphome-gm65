@@ -41,10 +41,10 @@ code and docs for using the gm65 with ESPhome
     - if writeing more than 1 zone the data needs to be in consecutive Zone order
   - Save Zone operation
     - set all to `0x00`
-    - TODO: figure out if the save operation saves all settings or only the settings of the zones referance by "Address" and "Length"
+    - TODO: figure out if the save operation saves all settings or only the settings of the zones referance by "Address" and "Data"
   - Reset Zone
     - set all to `0x00`
-    - TODO: figure out if the reset operation effects all settings or only the settings of the zones referance by "Address" and "Length"
+    - TODO: figure out if the reset operation effects all settings or only the settings of the zones referance by "Address" and "Data"
   - Erase Firmware
     - SCARY, DONT USE
     - prepares device for loading new firmware
